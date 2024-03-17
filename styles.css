@@ -1,0 +1,60 @@
+body {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #f7e7da;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+
+    
+  }
+
+  .right-align {
+    text-align: right;
+
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff6f61;
+  }
+  
+  .message {
+    margin-bottom: 20px;
+  }
+  
+  .message img {
+    max-width: 100px;
+  }
+  
+  .options {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #e84a40;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80%, 100% { transform: translateX(10px); }
+  }

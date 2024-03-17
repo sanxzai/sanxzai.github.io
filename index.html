@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>asunto importante o-o</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 id="titulo">mensajito importante</h1>
+    <div class="message" id="loveLetter">
+      <img src="love_letter.png" alt="">
+      <p>¡hola mi fresita!</p>
+      <p>se que no llevamos mucho tiempo conociendonos, sin embargo, contigo me he sentido verdaderamente feliz, lo mas que me he sentido en mucho tiempo.
+      <p>cada momento a tu lado se siente especial y único. tu voz es como una melodía que alegra mi día, y tus ojos brillan con una luz única que ilumina mi mundo. <3</p>
+      <p>por eso te escribo esta carta, para preguntarte algo muy especial...</p>
+      <h3>¿serias mi novia?</h3>
+      <p>por favor, piénsalo cuidadosamente y elige una opción.</p>
+      <p>con cariño,</p>
+      <p class="right-align">-san</p>
+    </div>
+    <div class="message" id="que" style="display: none;">
+      <h2>que</h2>
+    </div>
+    <div class="options">
+      <button onclick="rechazar()" id="button_no">iu, no -.-</button>
+      <button onclick="aceptar()" id="button_si">¡sí! c:</button>
+    </div>
+    <div id="funnyMessage" style="padding-top: 2vh;"></div>
+  </div>
+
+  <script>
+    var noClicks = 0;
+    var funnyMessage = document.getElementById('funnyMessage');
+    var container = document.querySelector('.container');
+    var loveLetter = document.getElementById('loveLetter');
+    var que = document.getElementById('que');
+    var siButton = document.getElementById('button_si');
+    var noButton = document.getElementById('button_no');
+    var titulo = document.getElementById('titulo');
+
+    function rechazar() {
+      noClicks++;
+      switch (noClicks) {
+        case 1:
+          funnyMessage.textContent = "oyee, creo que te quivocaste de botón! :s";
+          break;
+        case 2:
+          funnyMessage.textContent = "ya paso dos veces...";
+          break;
+        case 3:
+          funnyMessage.textContent = "¿segura? 🥲";
+          break;
+        case 4:
+          funnyMessage.textContent = "🥺";
+          break;
+        case 5:
+          funnyMessage.textContent = "te cocinare chilaquiles 😭";
+          break;
+        case 6:
+        funnyMessage.textContent = "por favor ;-;";
+          break;
+        default:
+          noButton.remove();
+          funnyMessage.textContent = "lo siento, no me dejaste alternativa :3";
+          break;
+      }
+
+      container.style.animation = "shake 0.5s";
+
+      setTimeout(function() {
+        container.style.animation = "";
+      }, 500);
+    }
+
+    function aceptar() {
+      loveLetter.style.display = "none";
+      que.style.display = "block";
+      siButton.textContent = "so <3"
+      noButton.remove();
+      funnyMessage.remove();
+      titulo.remove();
+    }
+  </script>
+</body>
+</html>
